@@ -489,6 +489,7 @@ MonoBehaviour:
   rb: {fileID: 2002346464}
   moveSpeed: 2
   myAnim: {fileID: 2002346466}
+  areaTransitionName: 
 --- !u!95 &2002346466
 Animator:
   serializedVersion: 4
@@ -516,6 +517,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 356556423, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: transitionName
+      value: 1-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 356556424, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.271
+      objectReference: {fileID: 0}
+    - target: {fileID: 356556424, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.169
+      objectReference: {fileID: 0}
     - target: {fileID: 8249764745704574038, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
       propertyPath: m_Name
       value: AreaExit
@@ -526,11 +539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.42
+      value: 4.43
       objectReference: {fileID: 0}
     - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 0.413
       objectReference: {fileID: 0}
     - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -563,6 +576,14 @@ PrefabInstance:
     - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574041, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: areaToLoad
+      value: TestScene2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574041, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: areaTransitionName
+      value: 1-1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
