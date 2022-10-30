@@ -15,8 +15,9 @@ public class CameraController : MonoBehaviour
     private float halfWidth;
 
     // Start is called before the first frame update
-    void Awake() {
-        target = PlayerController.instance.transform;
+    void Start() {
+        //target = PlayerController.instance.transform;
+        target = FindObjectOfType<PlayerController>().transform;
 
         halfHeight = Camera.main.orthographicSize;
         halfWidth = halfHeight * Camera.main.aspect;
