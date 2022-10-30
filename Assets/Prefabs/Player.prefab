@@ -141,6 +141,7 @@ MonoBehaviour:
   moveSpeed: 5
   myAnim: {fileID: 4543907708664334283}
   areaTransitionName: 
+  canMove: 1
 --- !u!95 &4543907708664334283
 Animator:
   serializedVersion: 4

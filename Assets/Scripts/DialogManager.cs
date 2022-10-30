@@ -14,11 +14,15 @@ public class DialogManager : MonoBehaviour
 
     public int currentLine;
 
+    public static DialogManager instance;
+    private bool justStarted;
+
     // Start is called before the first frame update
     void Start()
     {
-        dialogText.text = dialogLines[currentLine];
+        instance = this;
 
+        //dialogText.text = dialogLines[currentLine];
     }
 
     // Update is called once per frame
@@ -28,16 +32,44 @@ public class DialogManager : MonoBehaviour
 
             if(Input.GetButtonUp("Fire1")) {
 
-                currentLine++;
+                if  (!justStarted) {
+                    currentLine++;
 
-                if(currentLine >= dialogLines.Length) {
-                    dialogBox.SetActive(false);
+                    if(currentLine >= dialogLines.Length) {
+                        dialogBox.SetActive(false);
+                        PlayerController.instance.canMove = true;
+                    } else {
+                        CheckIfIsName();
+                        dialogText.text = dialogLines[currentLine];
+                    }
                 } else {
-                    dialogText.text = dialogLines[currentLine];
+                    justStarted = false;
                 }
 
             }
         }
-        
+    }
+
+    public void showDialog(string[] newLines, bool isPerson) 
+    {
+        dialogLines = newLines;
+        currentLine = 0;
+        CheckIfIsName();
+        dialogText.text = dialogLines[currentLine];
+        dialogBox.SetActive(true);
+
+        justStarted = true;
+
+        nameBox.SetActive(isPerson);
+
+        PlayerController.instance.canMove = false;
+    }
+
+    public void CheckIfIsName()
+    {
+        if  (dialogLines[currentLine].StartsWith("n-")) {
+            nameText.text = dialogLines[currentLine].Replace("n-","");
+            currentLine++;
+        }
     }
 }
