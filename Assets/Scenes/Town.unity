@@ -32849,6 +32849,34 @@ PrefabInstance:
       propertyPath: playerStats.Array.data[2]
       value: 
       objectReference: {fileID: 568414711}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 6446549349835130011, guid: 5e305d7ba1c6c044699aa512234c71d4, type: 3}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 2561584671094691830, guid: 0ce097749d3674348822f81b281e17bd, type: 3}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 3598170376811745097, guid: 5efc3126ba433664e84121a89273da51, type: 3}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.data[3]
+      value: 
+      objectReference: {fileID: 8865608204545755348, guid: 26d81606823d7094f93d6ccda8febcbb, type: 3}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.data[4]
+      value: 
+      objectReference: {fileID: 3397629703889236383, guid: 19b076e1158cd2f4d83b64fa56a9980a, type: 3}
+    - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: referenceItems.Array.data[5]
+      value: 
+      objectReference: {fileID: 2423728121212973566, guid: 00df6b115d8347342a28a03896f41b6e, type: 3}
     - target: {fileID: 4513783764970988203, guid: 88620025eb327844fb140c90853d531d, type: 3}
       propertyPath: m_Enabled
       value: 1
