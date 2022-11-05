@@ -13431,8 +13431,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1116272260}
         m_TargetAssemblyTypeName: GameMenu, Assembly-CSharp
-        m_MethodName: ToggleWindow
-        m_Mode: 3
+        m_MethodName: DiscardItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13440,7 +13440,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!114 &490388594
 MonoBehaviour:
   m_ObjectHideFlags: 0
