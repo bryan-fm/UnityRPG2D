@@ -20,11 +20,18 @@ public class GameMenu : MonoBehaviour
     public Text statusName, statusHP, statusMP, statusStr, statusDef, statusEqpdWpn, statusWpn, statusEqpdArmr, statusArmr, statusExp;
     public Image statusImage;
 
+    public ItemButton[] itemButtons;
+    public string selectedItem;
+    public Item activeItem;
+    public Text itemName, itemDescription, useButtonText;
+
+    public static GameMenu instance;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
@@ -114,5 +121,42 @@ public class GameMenu : MonoBehaviour
         statusArmr.text = playerStats[selected].armrPwr.ToString();
         statusExp.text = (playerStats[selected].expToNextLevel[playerStats[selected].playerLevel] - playerStats[selected].currentExp).ToString();
         statusImage.sprite = playerStats[selected].CharImage;
+    }
+
+    public void ShowItems()
+    {
+        GameManager.instance.SortItems();
+
+        for (int i = 0; i < itemButtons.Length; i++) {
+
+            itemButtons[i].buttonValue = i;
+
+            if (GameManager.instance.itemsHeld[i] != "") {
+
+                itemButtons[i].buttonImage.gameObject.SetActive(true);
+                itemButtons[i].buttonImage.sprite = GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[i]).itemSprite;
+                itemButtons[i].amountText.text = GameManager.instance.numberOfItems[i].ToString();
+            } else {
+
+                itemButtons[i].buttonImage.gameObject.SetActive(false);
+                itemButtons[i].amountText.text ="";
+            }
+        }
+    }
+
+    public void SelectItem(Item newItem)
+    {
+        activeItem = newItem;
+
+        if (activeItem.isItem) {
+            useButtonText.text = "Use";
+        }
+
+        if (activeItem.isWeapon || activeItem.isArmour) {
+            useButtonText.text = "Equip";
+        }
+
+        itemName.text = activeItem.itemName;
+        itemDescription.text = activeItem.description;
     }
 }
