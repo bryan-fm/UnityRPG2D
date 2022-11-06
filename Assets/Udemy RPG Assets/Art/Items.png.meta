@@ -446,6 +446,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Items_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffa5f43912dd564f8d40cb1a8afb1d9
+      internalID: 429301294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -459,6 +480,7 @@ TextureImporter:
     nameFileIdTable:
       rpgItems_7: 21300014
       rpgItems_5: 21300010
+      Items_0: 429301294
       rpgItems_2: 21300004
       rpgItems_0: 21300000
       rpgItems_39: 21300078
