@@ -171,7 +171,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec045a99c3e5154c8426bb7cc9d2290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: []
+  playerStats:
+  - {fileID: 2325696783572854705}
+  - {fileID: 2325696784508570257}
+  - {fileID: 4513783764970988203}
+  gameMenuOpen: 0
+  dialogActive: 0
+  fadingBetweenAreas: 0
+  shopActive: 0
+  itemsHeld:
+  - 
+  - 
+  - 
+  - 
+  - Health Potion
+  - 
+  - 
+  - Iron Sword
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Iron Armor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Mana Potion
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  numberOfItems: 000000000000000000000000000000000a0000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  referenceItems:
+  - {fileID: 6446549349835130011, guid: 5e305d7ba1c6c044699aa512234c71d4, type: 3}
+  - {fileID: 2561584671094691830, guid: 0ce097749d3674348822f81b281e17bd, type: 3}
+  - {fileID: 3598170376811745097, guid: 5efc3126ba433664e84121a89273da51, type: 3}
+  - {fileID: 8865608204545755348, guid: 26d81606823d7094f93d6ccda8febcbb, type: 3}
+  - {fileID: 3397629703889236383, guid: 19b076e1158cd2f4d83b64fa56a9980a, type: 3}
+  - {fileID: 2423728121212973566, guid: 00df6b115d8347342a28a03896f41b6e, type: 3}
+  currentGold: 0
 --- !u!1 &4746628181093454848
 GameObject:
   m_ObjectHideFlags: 0
