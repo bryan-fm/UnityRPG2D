@@ -13,9 +13,13 @@ public class DialogManager : MonoBehaviour
     public string[] dialogLines;
 
     public int currentLine;
+    private bool justStarted;
 
     public static DialogManager instance;
-    private bool justStarted;
+    
+    private string questToMark;
+    private bool markQuestComplete;
+    private bool shouldMarkQuest;
 
     // Start is called before the first frame update
     void Start()
@@ -33,16 +37,32 @@ public class DialogManager : MonoBehaviour
             if(Input.GetButtonUp("Fire1")) {
 
                 if  (!justStarted) {
+
                     currentLine++;
 
                     if(currentLine >= dialogLines.Length) {
+
                         dialogBox.SetActive(false);
                         GameManager.instance.dialogActive = false;
+
+                        if (shouldMarkQuest) {
+
+                            shouldMarkQuest = false;
+                            if (markQuestComplete) {
+
+                                QuestManager.instance.MarkQuestComplete(questToMark);
+                            } else {
+
+                                QuestManager.instance.MarkQuestIncomplete(questToMark);
+                            }
+                        }
                     } else {
+
                         CheckIfIsName();
                         dialogText.text = dialogLines[currentLine];
                     }
                 } else {
+
                     justStarted = false;
                 }
 
@@ -71,5 +91,13 @@ public class DialogManager : MonoBehaviour
             nameText.text = dialogLines[currentLine].Replace("n-","");
             currentLine++;
         }
+    }
+
+    public void ShouldActivateQuestAtEnd(string questName, bool markComplete)
+    {
+        questToMark = questName;
+        markQuestComplete = markComplete;
+
+        shouldMarkQuest = true;
     }
 }
