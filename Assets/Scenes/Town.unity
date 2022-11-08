@@ -184,6 +184,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc2578453d8be34cb80125d60ee8a3e, type: 3}
+--- !u!1001 &272192592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 356556422, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 356556424, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 356556424, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574038, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_Name
+      value: AreaExitShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13780525
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574039, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574041, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: areaToLoad
+      value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249764745704574041, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
+      propertyPath: areaTransitionName
+      value: Town-Shop
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0c0cc1a00ff4de4e9763cb6498585f2, type: 3}
 --- !u!1001 &337625841
 PrefabInstance:
   m_ObjectHideFlags: 0
