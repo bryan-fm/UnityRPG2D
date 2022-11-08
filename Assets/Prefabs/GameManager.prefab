@@ -134,6 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2325696785286453320}
   - component: {fileID: 2325696785286453323}
+  - component: {fileID: 1920351041}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -229,6 +230,25 @@ MonoBehaviour:
   - {fileID: 3397629703889236383, guid: 19b076e1158cd2f4d83b64fa56a9980a, type: 3}
   - {fileID: 2423728121212973566, guid: 00df6b115d8347342a28a03896f41b6e, type: 3}
   currentGold: 0
+--- !u!114 &1920351041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2325696785286453322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3add0441a455c4f87ca7be935effdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - Fight the enemy
+  - Enter the cave
+  - Quest test
+  - Save the world
+  questMarkersComplete: 
 --- !u!1 &4746628181093454848
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dbb49bff2bc434b8d3de04c761af17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charName: Woody
+  charName: Inactive
   playerLevel: 3
   currentExp: 543
   expToNextLevel: 
