@@ -400,6 +400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2325696785286453322, guid: 88620025eb327844fb140c90853d531d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2325696785286453323, guid: 88620025eb327844fb140c90853d531d, type: 3}
       propertyPath: currentGold
       value: 100
@@ -461,6 +465,10 @@ PrefabInstance:
       propertyPath: theMap
       value: 
       objectReference: {fileID: 1217384003}
+    - target: {fileID: 2877014406694540549, guid: fdc2578453d8be34cb80125d60ee8a3e, type: 3}
+      propertyPath: musicToPlay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2877014406694540553, guid: fdc2578453d8be34cb80125d60ee8a3e, type: 3}
       propertyPath: m_Name
       value: Custom Camera

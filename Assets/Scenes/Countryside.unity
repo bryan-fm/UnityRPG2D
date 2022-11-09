@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: theMap
       value: 
       objectReference: {fileID: 1959063761}
+    - target: {fileID: 2877014406694540549, guid: fdc2578453d8be34cb80125d60ee8a3e, type: 3}
+      propertyPath: musicToPlay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2877014406694540551, guid: fdc2578453d8be34cb80125d60ee8a3e, type: 3}
       propertyPath: far clip plane
       value: 1000
@@ -2551,7 +2555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &560762379
 MonoBehaviour:
   m_ObjectHideFlags: 0

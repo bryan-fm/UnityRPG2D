@@ -14,6 +14,9 @@ public class CameraController : MonoBehaviour
     private float halfHeight;
     private float halfWidth;
 
+    public int musicToPlay;
+    private bool musicStarted;
+
     // Start is called before the first frame update
     void Start() {
         //target = PlayerController.instance.transform;
@@ -53,5 +56,11 @@ public class CameraController : MonoBehaviour
             ),
             transform.position.z
         );
+
+        if (!musicStarted) {
+            
+            musicStarted = true;
+            AudioManager.instance.PlayBGM(musicToPlay);
+        }
     }
 }
