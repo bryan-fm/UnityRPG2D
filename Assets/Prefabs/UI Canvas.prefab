@@ -49795,6 +49795,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 646062222}
+        m_TargetAssemblyTypeName: GameMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2113912260
 GameObject:
   m_ObjectHideFlags: 0
@@ -50739,6 +50751,7 @@ MonoBehaviour:
   - {fileID: 1194656192}
   - {fileID: 1850793085}
   goldText: {fileID: 48098390}
+  mainMenuGame: MainMenu
 --- !u!114 &601940271
 MonoBehaviour:
   m_ObjectHideFlags: 0

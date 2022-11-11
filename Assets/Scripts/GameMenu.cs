@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class GameMenu : MonoBehaviour
 
     public static GameMenu instance;
     public Text goldText;
+
+    public string mainMenuGame;
 
 
     // Start is called before the first frame update
@@ -221,5 +224,15 @@ public class GameMenu : MonoBehaviour
     {
 
         AudioManager.instance.PlaySFX(4);
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(mainMenuGame);
+
+        Destroy(GameManager.instance.gameObject);
+        Destroy(PlayerController.instance.gameObject);
+        Destroy(AudioManager.instance.gameObject);
+        Destroy(gameObject);
     }
 }
