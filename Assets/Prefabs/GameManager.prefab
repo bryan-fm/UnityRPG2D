@@ -50,12 +50,12 @@ MonoBehaviour:
   expToNextLevel: 
   maxLevel: 100
   baseExp: 1000
-  currentHP: 1
+  currentHP: 100
   maxHP: 100
   currentMP: 30
   maxMP: 30
   mpLvlBonus: 
-  strength: 5
+  strength: 50
   defence: 12
   wpnPwr: 0
   armrPwr: 0
@@ -112,12 +112,12 @@ MonoBehaviour:
   expToNextLevel: 
   maxLevel: 100
   baseExp: 1000
-  currentHP: 1
+  currentHP: 150
   maxHP: 150
   currentMP: 25
   maxMP: 25
   mpLvlBonus: 
-  strength: 8
+  strength: 80
   defence: 16
   wpnPwr: 0
   armrPwr: 0

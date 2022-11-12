@@ -42,8 +42,14 @@ public class BattleManager : MonoBehaviour
     public BattleNotification battleMsg;
 
     public int chanceToFlee = 25;
+    private bool fleeing;
 
     public string gameOverScene;
+
+    public int rewardXP;
+    public string[] rewardItems;
+
+    private bool cannotFlee;
 
     // Start is called before the first frame update
     void Start()
@@ -55,10 +61,10 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T)) {
+       /* if (Input.GetKeyDown(KeyCode.T)) {
             
             BattleStart(new string[] {"Eyeball", "Spider", "Goblin"});
-        }
+        }*/
 
         if (battleActive) {
 
@@ -82,10 +88,11 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void BattleStart(string[] enemiesToSpawn)
+    public void BattleStart(string[] enemiesToSpawn, bool setCannotFlee)
     {
         if (!battleActive) {
 
+            cannotFlee = setCannotFlee;
             battleActive = true;
             GameManager.instance.battleActive = true;
             transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
@@ -382,18 +389,27 @@ public class BattleManager : MonoBehaviour
 
     public void Flee()
     {
-        int fleeSuccess = Random.Range(0,100);
+        if (cannotFlee) {
 
-        if (fleeSuccess < chanceToFlee) {
+            battleMsg.msg.text = "Cannot flee this battle";
+            battleMsg.Activate();
 
-            //battleActive = false;
-            //battleScene.SetActive(false);
-            StartCoroutine(EndBattleCo());
         } else {
 
-            NextTurn();
-            battleMsg.msg.text = "Coudn't escape!";
-            battleMsg.Activate();
+            int fleeSuccess = Random.Range(0,100);
+
+            if (fleeSuccess < chanceToFlee) {
+
+                //battleActive = false;
+                //battleScene.SetActive(false);
+                fleeing = true;
+                StartCoroutine(EndBattleCo());
+            } else {
+
+                NextTurn();
+                battleMsg.msg.text = "Coudn't escape!";
+                battleMsg.Activate();
+            }
         }
     }
 
@@ -431,7 +447,16 @@ public class BattleManager : MonoBehaviour
         battleScene.SetActive(false);
         activeBattlers.Clear();
         currentTurn = 0;
-        GameManager.instance.battleActive = false;
+        //GameManager.instance.battleActive = false;
+
+        if(fleeing)
+        {
+            GameManager.instance.battleActive = false;
+            fleeing = false;
+        } else {
+
+            BattleRewards.instance.OpenRewardScreen(rewardXP, rewardItems);
+        }
 
         AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);
     }
