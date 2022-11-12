@@ -10,6 +10,7 @@ public class BattleMagicSelect : MonoBehaviour
     public int spellCost;
     public Text nameText, costText;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,9 @@ public class BattleMagicSelect : MonoBehaviour
             BattleManager.instance.activeBattlers[BattleManager.instance.currentTurn].currentMP -= spellCost;
         } else {
 
-            //let player know there is not enough MP
+            BattleManager.instance.battleMsg.msg.text = "Not Enough MP!";
+            BattleManager.instance.battleMsg.Activate();
+            BattleManager.instance.magicMenu.SetActive(false);
         }
     }
 }

@@ -38,6 +38,10 @@ public class BattleManager : MonoBehaviour
     public GameObject magicMenu;
     public BattleMagicSelect[] magicButtons;
 
+    public BattleNotification battleMsg;
+
+    public int chanceToFlee = 25;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -361,6 +365,22 @@ public class BattleManager : MonoBehaviour
 
                 magicButtons[i].gameObject.SetActive(false);
             }
+        }
+    }
+
+    public void Flee()
+    {
+        int fleeSuccess = Random.Range(0,100);
+
+        if (fleeSuccess < chanceToFlee) {
+
+            battleActive = false;
+            battleScene.SetActive(false);
+        } else {
+
+            NextTurn();
+            battleMsg.msg.text = "Coudn't escape!";
+            battleMsg.Activate();
         }
     }
 }
