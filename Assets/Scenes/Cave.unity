@@ -12101,6 +12101,7 @@ MonoBehaviour:
   - {fileID: 1135083760}
   battleMsg: {fileID: 570238641}
   chanceToFlee: 25
+  gameOverScene: GameOver
 --- !u!4 &647263465
 Transform:
   m_ObjectHideFlags: 0

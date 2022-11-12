@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: edac54f517b77a04cb08c3d1ebb0e944
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 54cd535fb11561547929586f4e40072e
   m_configObjects: {}
