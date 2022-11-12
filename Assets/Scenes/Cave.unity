@@ -9679,6 +9679,18 @@ MonoBehaviour:
     theEffect: {fileID: 7541300628726652503, guid: 25f2038289df3784b8def7e819e61334, type: 3}
   enemyAttackEffect: {fileID: 4568726971368277100, guid: 2514704d58483f84897e6a04c0b34283, type: 3}
   theDamageNumber: {fileID: 3198412001411264047, guid: a0b564f25d264574db3a090316e326dd, type: 3}
+  playerName:
+  - {fileID: 1381073393}
+  - {fileID: 1268771145}
+  - {fileID: 1593509116}
+  playerHP:
+  - {fileID: 1476754346}
+  - {fileID: 1591575860}
+  - {fileID: 1267904951}
+  playerMP:
+  - {fileID: 236323776}
+  - {fileID: 867440625}
+  - {fileID: 2609925}
 --- !u!4 &647263465
 Transform:
   m_ObjectHideFlags: 0
@@ -11242,7 +11254,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1460010760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 647263464}
+        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
+        m_MethodName: PlayerAttack
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Slash
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1460010760
 MonoBehaviour:
   m_ObjectHideFlags: 0
