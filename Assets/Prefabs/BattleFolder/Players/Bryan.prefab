@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6790579605160893029}
   - component: {fileID: 2958636292064886635}
   m_Layer: 0
-  m_Name: Tim
+  m_Name: Bryan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   movesAvailable: []
-  charName: Tim
+  charName: Bryan
   currentHP: 0
   maxHP: 0
   currentMP: 0
