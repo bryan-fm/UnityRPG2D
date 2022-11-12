@@ -25,6 +25,9 @@ public class BattleManager : MonoBehaviour
     public GameObject uiButtonsHolder;
 
     public BattleMove[] movesList;
+    public GameObject enemyAttackEffect;
+
+    public DamageNumber theDamageNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -201,13 +204,33 @@ public class BattleManager : MonoBehaviour
         //activeBattlers[selectedTarget].currentHP -= 30;
 
         int selectedAttack = Random.Range(0, activeBattlers[currentTurn].movesAvailable.Length);
+        int movePower = 0;
 
         for (int i = 0; i < movesList.Length; i++) {
 
             if (movesList[i].moveName == activeBattlers[currentTurn].movesAvailable[selectedAttack]) {
 
                 Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
+                movePower = movesList[i].movePower;
             }
         }
+
+        Instantiate(enemyAttackEffect, activeBattlers[currentTurn].transform.position, activeBattlers[currentTurn].transform.rotation);
+
+        DealDamage(selectedTarget, movePower);
+    }
+
+    public void DealDamage(int target, int movePower)
+    {
+        float atkPwr = activeBattlers[currentTurn].strength + activeBattlers[currentTurn].wpnPower;
+        float defPwr = activeBattlers[target].defence + activeBattlers[currentTurn].armrPower;
+
+        float damageCalc = (atkPwr / defPwr) * movePower * (Random.Range(.9f, 1.1f));
+        int damageToDeal = Mathf.RoundToInt(damageCalc);
+
+        Debug.Log(activeBattlers[currentTurn].charName + " is dealing " + damageCalc + "(" + damageToDeal + ") damage to " + activeBattlers[target].charName);
+        activeBattlers[target].currentHP -= damageToDeal;
+
+        Instantiate(theDamageNumber, activeBattlers[target].transform.position,  activeBattlers[target].transform.rotation).SetDamage(damageToDeal);
     }
 }

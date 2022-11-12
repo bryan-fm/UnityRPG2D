@@ -9677,6 +9677,8 @@ MonoBehaviour:
     movePower: 85
     moveCost: 10
     theEffect: {fileID: 7541300628726652503, guid: 25f2038289df3784b8def7e819e61334, type: 3}
+  enemyAttackEffect: {fileID: 4568726971368277100, guid: 2514704d58483f84897e6a04c0b34283, type: 3}
+  theDamageNumber: {fileID: 3198412001411264047, guid: a0b564f25d264574db3a090316e326dd, type: 3}
 --- !u!4 &647263465
 Transform:
   m_ObjectHideFlags: 0
