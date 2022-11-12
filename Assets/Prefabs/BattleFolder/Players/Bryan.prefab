@@ -98,7 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  movesAvailable: []
+  movesAvailable:
+  - Fire
+  - Ice
+  - Plasma
   charName: Bryan
   currentHP: 0
   maxHP: 0
