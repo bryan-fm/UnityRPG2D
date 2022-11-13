@@ -10810,6 +10810,11 @@ MonoBehaviour:
   - n-Player
   - Dont worry!
   - I'll save them!
+  afterCompletionlines:
+  - n-Player
+  - It's done, the dragon is dead.
+  - n-Girl
+  - Thanks, you saved them
   canActivate: 0
   isPerson: 1
   shouldActivateQuest: 1
@@ -10989,6 +10994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - Blue Pen
+  afterCompletionlines: []
   canActivate: 0
   isPerson: 0
   shouldActivateQuest: 0

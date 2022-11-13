@@ -55,8 +55,8 @@ MonoBehaviour:
   currentMP: 30
   maxMP: 30
   mpLvlBonus: 
-  strength: 50
-  defence: 12
+  strength: 10
+  defence: 15
   wpnPwr: 0
   armrPwr: 0
   equippedWpn: 
@@ -117,7 +117,7 @@ MonoBehaviour:
   currentMP: 25
   maxMP: 25
   mpLvlBonus: 
-  strength: 80
+  strength: 10
   defence: 16
   wpnPwr: 0
   armrPwr: 0

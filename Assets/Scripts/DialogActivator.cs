@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogActivator : MonoBehaviour
 {
     public string[] lines;
+    public string[] afterCompletionlines;
 
     public bool canActivate;
 
@@ -24,9 +25,18 @@ public class DialogActivator : MonoBehaviour
     void Update()
     {
         if(canActivate && Input.GetButtonDown("Fire1") && !DialogManager.instance.dialogBox.activeInHierarchy) {
-            DialogManager.instance.showDialog(lines, isPerson);
-            DialogManager.instance.ShouldActivateQuestAtEnd(questToMark, markComplete); 
+
+            if (QuestManager.instance.CheckIfComplete(questToMark)) {
+
+                DialogManager.instance.showDialog(afterCompletionlines, isPerson);
+
+            } else {
+
+                DialogManager.instance.showDialog(lines, isPerson);
+                DialogManager.instance.ShouldActivateQuestAtEnd(questToMark, markComplete); 
+            }
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
