@@ -64,6 +64,7 @@ public class QuestManager : MonoBehaviour
         return false;
     }
 
+
     public void MarkQuestComplete(string questToMark)
     {
         questMarkersComplete[GetQuestNumber(questToMark)] = true;
